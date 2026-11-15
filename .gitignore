@@ -1,0 +1,19 @@
+# Local environment files in either app
+
+.env
+.env.*
+!.env.example
+
+# Rails encryption keys
+
+/backend/config/master.key
+/backend/config/credentials/*.key
+
+# Rails logs, temp files, and local SQLite Storage
+
+/backend/log/*
+!/backend/log/.keep
+/backend/tmp/*
+!/backend/tmp/.keep
+/backend/storage/*
+!/backend/storage/.keep
