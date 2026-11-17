@@ -1,10 +1,14 @@
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar/Navbar'
+import Hero from './components/Hero/Hero'
+import About from './components/About/About'
 
 export default function App() {
   return (
-    <div id='app'>
+    <div id='top'>
       <Navbar />
       <main>
+        <Hero />
+        <About />
       </main>
     </div>
   )

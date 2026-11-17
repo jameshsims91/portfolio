@@ -1,0 +1,54 @@
+.navbar-headshot {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.navbar-brand {
+  font-size: 1.2rem;
+}
+
+.navbar .nav-link {
+  transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #ffffff;
+}
+
+.navbar .nav-link.text-danger:hover {
+  color: #ff8b94 !important;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    padding: 1rem 0;
+  }
+
+  .navbar .nav-link {
+    padding: 0.75 rem 0;
+  }
+
+  .navbar .btn {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navbar-headshot {
+    width: 42px;
+    height: 42px;
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar .nav-link {
+    transition: none;
+  }
+}

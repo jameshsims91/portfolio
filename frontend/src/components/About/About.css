@@ -1,0 +1,134 @@
+
+.about-section {
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 6rem 0;
+  scroll-margin-top: 90px;
+}
+
+.about-label {
+  color: #a5b4fc;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.about-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.about-title span {
+  color: #818cf8;
+}
+
+.about-heading-line {
+  width: 50px;
+  height: 4px;
+  background-color: #6366f1;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.about-content {
+  max-width: 620px;
+}
+
+.about-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  background-color: rgba(99, 102, 241, 0.12);
+  color: #a5b4fc;
+  border-radius: 1rem;
+}
+
+.about-subtitle {
+  color: #ffffff;
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.about-content p {
+  color: #cbd5e1;
+  font-size: 1rem;
+  line-height: 1.9;
+  margin-bottom: 1.25rem;
+}
+
+/* Highlight Cards */
+
+.about-card {
+  background-color: #17243a;
+  border: 1px solid #334155;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  border-color: #6366f1;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.about-card-icon {
+  color: #818cf8;
+}
+
+.about-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.about-card-description {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #94a3b8;
+}
+
+/* Tablet and Mobile */
+
+@media (max-width: 991.98px) {
+  .about-section {
+    padding: 5rem 0;
+  }
+
+  .about-content {
+    max-width: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about-section {
+    padding: 3.5rem 0;
+  }
+
+  .about-card {
+    padding: 1.25rem;
+  }
+
+  .about-content p {
+    line-height: 1.8;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-card {
+    transition: none;
+  }
+
+  .about-card:hover {
+    transform: none;
+  }
+}

@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import headshot from '../assets/headshot.webp'
-import resume from '../assets/resume.pdf'
+import headshot from '../../assets/headshot.webp'
+import resume from '../../assets/resume.pdf'
+import './Navbar.css'
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -45,7 +46,7 @@ export default function Navbar() {
               </a>
             </li>
             <li className='nav-item'>
-              <a className='nav-link fw-bold text-danger' href={resume} target='_blank' rel='noopener noreferrer'>
+              <a className='nav-link fw-bold text-danger' href={resume} target='_blank' rel='noopener noreferrer' onClick={closeMenu} aria-label='View resume PDF in a new tab'>
                 Resume
               </a>
             </li>
