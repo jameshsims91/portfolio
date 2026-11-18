@@ -886,3 +886,10 @@ Using vips to process variants requires the libvips library. Please install libv
   [1m[36mContactMessage Destroy (0.3ms)[0m  [1m[31mDELETE FROM "contact_messages" WHERE "contact_messages"."id" = 11 /*application='Backend'*/[0m
   [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
   [1m[36mContactMessage Load (0.3ms)[0m  [1m[34mSELECT "contact_messages".* FROM "contact_messages" ORDER BY "contact_messages"."id" DESC LIMIT 10 /*application='Backend'*/[0m
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-18 14:24:38 -0500
+Processing by Api::ProjectsController#index as */*
+  [1m[36mProject Load (6.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 9.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+

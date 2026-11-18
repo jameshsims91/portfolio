@@ -232,11 +232,31 @@
   white-space: nowrap;
 }
 
+/* Responsive Overflow Protection */
+
+.contact-section {
+  overflow-wrap: anywhere;
+}
+
+.contact-info,
+.contact-form-card {
+  min-width: 0;
+}
+
+.contact-input {
+  width: 100%;
+  max-width: 100%;
+}
+
 /* Tablet */
 
 @media (max-width: 991.98px) {
   .contact-section {
     padding: 5rem 0;
+  }
+
+  .contact-info {
+    max-width: 720px;
   }
 
   .contact-form-card {
@@ -251,6 +271,10 @@
     padding: 3.5rem 0;
   }
 
+  .contact-heading {
+    margin-bottom: 2rem !important;
+  }
+
   .contact-form-card {
     padding: 1.25rem;
   }
@@ -261,6 +285,24 @@
 
   .contact-form-title {
     font-size: 1.2rem;
+  }
+
+  .contact-info-list {
+    gap: 1.25rem;
+  }
+
+  .contact-info-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .contact-input {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .contact-submit-btn {
+    width: 100%;
   }
 }
 
