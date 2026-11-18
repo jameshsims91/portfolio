@@ -69,6 +69,8 @@
   border: 1px solid #334155;
   border-radius: 1rem;
   padding: 1.5rem;
+  min-width: 0;
+  overflow-wrap: anywhere;
   transition:
     transform 0.25s ease,
     border-color 0.25s ease,
@@ -90,12 +92,18 @@
   font-weight: 700;
   color: #ffffff;
   line-height: 1.5;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 .about-card-description {
   font-size: 0.9rem;
   line-height: 1.7;
   color: #94a3b8;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 /* Tablet and Mobile */
@@ -133,3 +141,21 @@
     transform: none;
   }
 }
+
+/* Responsive About Card Container */
+
+.about-section .col-lg-6 {
+  container-type: inline-size;
+}
+
+/* Stack cards when available space is limited
+   relative to the user's text size */
+
+@container (max-width: 36rem) {
+  .about-section .row-cols-sm-2 > .col {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
