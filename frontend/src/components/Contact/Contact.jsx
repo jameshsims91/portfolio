@@ -7,6 +7,7 @@ const initialFormData = {
   name: '',
   email: '',
   message: '',
+  website: '', // Honeypot field for spam prevention
 }
 
 export default function Contact() {
@@ -48,6 +49,7 @@ export default function Contact() {
             name: formData.name.trim(),
             email: formData.email.trim(),
             message: formData.message.trim(),
+            website: formData.website, // Honeypot field
           }
         })
       })
@@ -184,6 +186,23 @@ export default function Contact() {
                     {error}
                   </div>
                 )}
+
+                {/* Honeypot field - not intended for real visitors */}
+                <div className='contact-honeypot' aria-hidden='true'>
+                  <label htmlFor='contact-website'>
+                    Leave this field empty
+                  </label>
+
+                  <input
+                    type='text'
+                    id='contact-website'
+                    name='website'
+                    tabIndex={-1}
+                    autoComplete='off'
+                    value={formData.website}
+                    onChange={handleChange}
+                  />
+                </div>
 
                 {/* Name */}
                 <div className='mb-4'>

@@ -127,4 +127,27 @@ class ContactMessagesApiTest < ActionDispatch::IntegrationTest
 
     assert_response :not_found
   end
+
+  test "POST silently discards honeypot submissions" do
+    spam_params = {
+      contact_message: @valid_params[:contact_message].merge(
+        website: "https://spam-example.invalid"
+      )
+    }
+
+    assert_no_difference "ContactMessage.count" do
+      post "/api/contact_messages",
+           params: spam_params,
+           as: :json
+    end
+
+    assert_response :created
+
+    response_body = JSON.parse(response.body)
+
+    assert_equal(
+      "Your message has been received successfully.",
+      response_body["message"]
+    )
+  end
 end

@@ -221,6 +221,17 @@
   height: 1rem;
 }
 
+/* Honeypot Anti-Span Field */
+
+.contact-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 /* Tablet */
 
 @media (max-width: 991.98px) {

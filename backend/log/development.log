@@ -740,3 +740,118 @@ Completed 201 Created in 5ms (Views: 0.1ms | ActiveRecord: 3.4ms (1 query, 0 cac
 
 
 Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Started POST "/api/contact_messages" for ::1 at 2026-11-18 13:30:31 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by Api::ContactMessagesController#create as */*
+  Parameters: {"contact_message" => {"name" => "Rate Limit Test", "email" => "[FILTERED]", "message" => "Testing contact form rate limiting."}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='contact_messages'*/[0m
+  ↳ app/controllers/api/contact_messages_controller.rb:15:in 'Api::ContactMessagesController#create'
+  [1m[36mContactMessage Create (0.9ms)[0m  [1m[32mINSERT INTO "contact_messages" ("name", "email", "message", "created_at", "updated_at") VALUES ('Rate Limit Test', 'ratelimit@example.com', 'Testing contact form rate limiting.', '2026-11-18 18:30:31.518891', '2026-11-18 18:30:31.518891') RETURNING "id" /*action='create',application='Backend',controller='contact_messages'*/[0m
+  ↳ app/controllers/api/contact_messages_controller.rb:15:in 'Api::ContactMessagesController#create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT /*action='create',application='Backend',controller='contact_messages'*/[0m
+  ↳ app/controllers/api/contact_messages_controller.rb:15:in 'Api::ContactMessagesController#create'
+Completed 201 Created in 21ms (Views: 0.2ms | ActiveRecord: 7.1ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started POST "/api/contact_messages" for ::1 at 2026-11-18 13:30:31 -0500
+Processing by Api::ContactMessagesController#create as */*
+  Parameters: {"contact_message" => {"name" => "Rate Limit Test", "email" => "[FILTERED]", "message" => "Testing contact form rate limiting."}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='contact_messages'*/[0m
+  ↳ app/controllers/api/contact_messages_controller.rb:15:in 'Api::ContactMessagesController#create'
+  [1m[36mContactMessage Create (0.9ms)[0m  [1m[32mINSERT INTO "contact_messages" ("name", "email", "message", "created_at", "updated_at") VALUES ('Rate Limit Test', 'ratelimit@example.com', 'Testing contact form rate limiting.', '2026-11-18 18:30:31.531598', '2026-11-18 18:30:31.531598') RETURNING "id" /*action='create',application='Backend',controller='contact_messages'*/[0m
+  ↳ app/controllers/api/contact_messages_controller.rb:15:in 'Api::ContactMessagesController#create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT /*action='create',application='Backend',controller='contact_messages'*/[0m
+  ↳ app/controllers/api/contact_messages_controller.rb:15:in 'Api::ContactMessagesController#create'
+Completed 201 Created in 4ms (Views: 0.1ms | ActiveRecord: 2.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/contact_messages" for ::1 at 2026-11-18 13:30:31 -0500
+Processing by Api::ContactMessagesController#create as */*
+  Parameters: {"contact_message" => {"name" => "Rate Limit Test", "email" => "[FILTERED]", "message" => "Testing contact form rate limiting."}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='contact_messages'*/[0m
+  ↳ app/controllers/api/contact_messages_controller.rb:15:in 'Api::ContactMessagesController#create'
+  [1m[36mContactMessage Create (1.0ms)[0m  [1m[32mINSERT INTO "contact_messages" ("name", "email", "message", "created_at", "updated_at") VALUES ('Rate Limit Test', 'ratelimit@example.com', 'Testing contact form rate limiting.', '2026-11-18 18:30:31.541636', '2026-11-18 18:30:31.541636') RETURNING "id" /*action='create',application='Backend',controller='contact_messages'*/[0m
+  ↳ app/controllers/api/contact_messages_controller.rb:15:in 'Api::ContactMessagesController#create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT /*action='create',application='Backend',controller='contact_messages'*/[0m
+  ↳ app/controllers/api/contact_messages_controller.rb:15:in 'Api::ContactMessagesController#create'
+Completed 201 Created in 4ms (Views: 0.1ms | ActiveRecord: 2.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/contact_messages" for ::1 at 2026-11-18 13:30:31 -0500
+Processing by Api::ContactMessagesController#create as */*
+  Parameters: {"contact_message" => {"name" => "Rate Limit Test", "email" => "[FILTERED]", "message" => "Testing contact form rate limiting."}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='contact_messages'*/[0m
+  ↳ app/controllers/api/contact_messages_controller.rb:15:in 'Api::ContactMessagesController#create'
+  [1m[36mContactMessage Create (0.9ms)[0m  [1m[32mINSERT INTO "contact_messages" ("name", "email", "message", "created_at", "updated_at") VALUES ('Rate Limit Test', 'ratelimit@example.com', 'Testing contact form rate limiting.', '2026-11-18 18:30:31.553201', '2026-11-18 18:30:31.553201') RETURNING "id" /*action='create',application='Backend',controller='contact_messages'*/[0m
+  ↳ app/controllers/api/contact_messages_controller.rb:15:in 'Api::ContactMessagesController#create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT /*action='create',application='Backend',controller='contact_messages'*/[0m
+  ↳ app/controllers/api/contact_messages_controller.rb:15:in 'Api::ContactMessagesController#create'
+Completed 201 Created in 5ms (Views: 0.1ms | ActiveRecord: 2.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/contact_messages" for ::1 at 2026-11-18 13:30:31 -0500
+Processing by Api::ContactMessagesController#create as */*
+  Parameters: {"contact_message" => {"name" => "Rate Limit Test", "email" => "[FILTERED]", "message" => "Testing contact form rate limiting."}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='contact_messages'*/[0m
+  ↳ app/controllers/api/contact_messages_controller.rb:15:in 'Api::ContactMessagesController#create'
+  [1m[36mContactMessage Create (1.0ms)[0m  [1m[32mINSERT INTO "contact_messages" ("name", "email", "message", "created_at", "updated_at") VALUES ('Rate Limit Test', 'ratelimit@example.com', 'Testing contact form rate limiting.', '2026-11-18 18:30:31.563603', '2026-11-18 18:30:31.563603') RETURNING "id" /*action='create',application='Backend',controller='contact_messages'*/[0m
+  ↳ app/controllers/api/contact_messages_controller.rb:15:in 'Api::ContactMessagesController#create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT /*action='create',application='Backend',controller='contact_messages'*/[0m
+  ↳ app/controllers/api/contact_messages_controller.rb:15:in 'Api::ContactMessagesController#create'
+Completed 201 Created in 5ms (Views: 0.1ms | ActiveRecord: 2.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/contact_messages" for ::1 at 2026-11-18 13:30:31 -0500
+Processing by Api::ContactMessagesController#create as */*
+  Parameters: {"contact_message" => {"name" => "Rate Limit Test", "email" => "[FILTERED]", "message" => "Testing contact form rate limiting."}}
+Filter chain halted as #<Proc:0x000075e919802ca8 /home/jameshsims91/.local/share/mise/installs/ruby/4.0.5/lib/ruby/gems/4.0.0/gems/actionpack-8.1.4.1/lib/action_controller/metal/rate_limiting.rb:67 (lambda)> rendered or redirected
+Completed 429 Too Many Requests in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+  [1m[36mContactMessage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "contact_messages" WHERE "contact_messages"."email" = 'ratelimit@example.com' /*application='Backend'*/[0m
+  [1m[36mContactMessage Load (0.2ms)[0m  [1m[34mSELECT "contact_messages".* FROM "contact_messages" ORDER BY "contact_messages"."id" DESC LIMIT 5 /*application='Backend'*/[0m
+  [1m[36mContactMessage Load (0.4ms)[0m  [1m[34mSELECT "contact_messages".* FROM "contact_messages" WHERE "contact_messages"."id" = 5 LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mContactMessage Destroy (0.5ms)[0m  [1m[31mDELETE FROM "contact_messages" WHERE "contact_messages"."id" = 5 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mContactMessage Load (0.4ms)[0m  [1m[34mSELECT "contact_messages".* FROM "contact_messages" WHERE "contact_messages"."id" = 6 LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mContactMessage Destroy (0.4ms)[0m  [1m[31mDELETE FROM "contact_messages" WHERE "contact_messages"."id" = 6 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mContactMessage Load (0.4ms)[0m  [1m[34mSELECT "contact_messages".* FROM "contact_messages" ORDER BY "contact_messages"."id" DESC LIMIT 7 /*application='Backend'*/[0m
+  [1m[36mContactMessage Load (0.3ms)[0m  [1m[34mSELECT "contact_messages".* FROM "contact_messages" WHERE "contact_messages"."id" = 4 LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mContactMessage Destroy (0.3ms)[0m  [1m[31mDELETE FROM "contact_messages" WHERE "contact_messages"."id" = 4 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mContactMessage Load (0.4ms)[0m  [1m[34mSELECT "contact_messages".* FROM "contact_messages" WHERE "contact_messages"."id" = 7 LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mContactMessage Destroy (0.4ms)[0m  [1m[31mDELETE FROM "contact_messages" WHERE "contact_messages"."id" = 7 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mContactMessage Load (0.4ms)[0m  [1m[34mSELECT "contact_messages".* FROM "contact_messages" ORDER BY "contact_messages"."id" DESC LIMIT 11 /*application='Backend'*/[0m
+  [1m[36mContactMessage Load (0.4ms)[0m  [1m[34mSELECT "contact_messages".* FROM "contact_messages" WHERE "contact_messages"."id" = 8 LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mContactMessage Destroy (0.4ms)[0m  [1m[31mDELETE FROM "contact_messages" WHERE "contact_messages"."id" = 8 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mContactMessage Load (0.4ms)[0m  [1m[34mSELECT "contact_messages".* FROM "contact_messages" WHERE "contact_messages"."id" = 9 LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mContactMessage Destroy (0.3ms)[0m  [1m[31mDELETE FROM "contact_messages" WHERE "contact_messages"."id" = 9 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mContactMessage Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "contact_messages" LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mContactMessage Load (0.4ms)[0m  [1m[34mSELECT "contact_messages".* FROM "contact_messages" ORDER BY "contact_messages"."id" DESC LIMIT 20 /*application='Backend'*/[0m
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Started POST "/api/contact_messages" for 127.0.0.1 at 2026-11-18 13:52:12 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by Api::ContactMessagesController#create as */*
+  Parameters: {"contact_message" => {"name" => "Test Recruiter", "email" => "[FILTERED]", "message" => "Hello, I would like to discuss an opportunity."}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='contact_messages'*/[0m
+  ↳ app/controllers/api/contact_messages_controller.rb:22:in 'Api::ContactMessagesController#create'
+  [1m[36mContactMessage Create (1.0ms)[0m  [1m[32mINSERT INTO "contact_messages" ("name", "email", "message", "created_at", "updated_at") VALUES ('Test Recruiter', 'recruiter@example.com', 'Hello, I would like to discuss an opportunity.', '2026-11-18 18:52:12.402761', '2026-11-18 18:52:12.402761') RETURNING "id" /*action='create',application='Backend',controller='contact_messages'*/[0m
+  ↳ app/controllers/api/contact_messages_controller.rb:22:in 'Api::ContactMessagesController#create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT /*action='create',application='Backend',controller='contact_messages'*/[0m
+  ↳ app/controllers/api/contact_messages_controller.rb:22:in 'Api::ContactMessagesController#create'
+Completed 201 Created in 18ms (Views: 0.2ms | ActiveRecord: 7.1ms (1 query, 0 cached) | GC: 0.1ms)
+
+
