@@ -615,3 +615,65 @@ Processing by Api::ProjectsController#index as */*
 Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-18 00:55:27 -0500
+Processing by Api::ProjectsController#index as */*
+  [1m[36mProject Load (11.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 16.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205) /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Backend'*/[0m
+Migrating to CreateContactMessages (20261118055856)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[35m (14.4ms)[0m  [1m[35mCREATE TABLE "contact_messages" ("id" bigserial primary key, "name" character varying NOT NULL, "email" character varying NOT NULL, "message" text NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20261118055856') RETURNING "version" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205) /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Backend'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO "$user", public /*application='Backend'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Backend'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO "$user", public /*application='Backend'*/[0m
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mContactMessage Create (1.2ms)[0m  [1m[32mINSERT INTO "contact_messages" ("name", "email", "message", "created_at", "updated_at") VALUES ('Test Recruiter', 'recruiter@example.com', 'I''d like to discuss a software development opportunity.', '2026-11-18 06:06:01.207026', '2026-11-18 06:06:01.207026') RETURNING "id" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mContactMessage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "contact_messages" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mContactMessage Destroy (1.0ms)[0m  [1m[31mDELETE FROM "contact_messages" WHERE "contact_messages"."id" = 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mContactMessage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "contact_messages" /*application='Backend'*/[0m
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Started POST "/api/contact_messages" for ::1 at 2026-11-18 01:15:09 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by Api::ContactMessagesController#create as */*
+  Parameters: {"contact_message" => {"name" => "Test Recruiter", "email" => "[FILTERED]", "message" => "I would like to discuss a software development opportunity."}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='contact_messages'*/[0m
+  ↳ app/controllers/api/contact_messages_controller.rb:6:in 'Api::ContactMessagesController#create'
+  [1m[36mContactMessage Create (1.2ms)[0m  [1m[32mINSERT INTO "contact_messages" ("name", "email", "message", "created_at", "updated_at") VALUES ('Test Recruiter', 'recruiter@example.com', 'I would like to discuss a software development opportunity.', '2026-11-18 06:15:09.402057', '2026-11-18 06:15:09.402057') RETURNING "id" /*action='create',application='Backend',controller='contact_messages'*/[0m
+  ↳ app/controllers/api/contact_messages_controller.rb:6:in 'Api::ContactMessagesController#create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT /*action='create',application='Backend',controller='contact_messages'*/[0m
+  ↳ app/controllers/api/contact_messages_controller.rb:6:in 'Api::ContactMessagesController#create'
+Completed 201 Created in 19ms (Views: 0.1ms | ActiveRecord: 8.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+  [1m[36mContactMessage Load (0.4ms)[0m  [1m[34mSELECT "contact_messages".* FROM "contact_messages" ORDER BY "contact_messages"."id" DESC LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mContactMessage Load (0.6ms)[0m  [1m[34mSELECT "contact_messages".* FROM "contact_messages" ORDER BY "contact_messages"."id" DESC LIMIT 5 /*application='Backend'*/[0m
+  [1m[36mContactMessage Load (0.5ms)[0m  [1m[34mSELECT "contact_messages".* FROM "contact_messages" WHERE "contact_messages"."id" = 2 LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mContactMessage Destroy (0.4ms)[0m  [1m[31mDELETE FROM "contact_messages" WHERE "contact_messages"."id" = 2 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mContactMessage Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "contact_messages" LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mContactMessage Load (0.5ms)[0m  [1m[34mSELECT "contact_messages".* FROM "contact_messages" ORDER BY "contact_messages"."id" DESC LIMIT 2 /*application='Backend'*/[0m
+Started POST "/api/contact_messages" for ::1 at 2026-11-18 01:20:29 -0500
+Processing by Api::ContactMessagesController#create as */*
+  Parameters: {"contact_message" => {"name" => "", "email" => "[FILTERED]", "message" => "Hi"}}
+Completed 422 Unprocessable Content in 25ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 14.4ms)
+
+
