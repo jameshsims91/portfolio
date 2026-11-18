@@ -1,9 +1,80 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+projects = [
+  {
+    title: 'Full-Stack Messaging App',
+    description: 'A full-stack messaging application built with Ruby on Rails and React. Features user authentication, customizable profiles, conversations, message history, and RESTful API communication.',
+    technologies: [
+      'Ruby',
+      'Ruby on Rails',
+      'React',
+      'JavaScript',
+      'PostgreSQL',
+      'REST API'
+    ],
+    github_url: nil,
+    live_url: nil,
+    image_url: nil,
+    featured: true,
+    position: 1
+  },
+  {
+    title: "Photo Tagging Game",
+    description: "An interactive photo tagging game featuring server-side target validation, game sessions, scoring, and a leaderboard. Uses a Rails backend to validate guesses and manage gameplay data.",
+    technologies: [
+      "Ruby",
+      "Ruby on Rails",
+      "React",
+      "JavaScript",
+      "REST API"
+    ],
+    github_url: nil,
+    live_url: nil,
+    image_url: nil,
+    featured: true,
+    position: 2
+  },
+  {
+    title: "React Shopping Cart",
+    description: "A responsive shopping cart application featuring product listings, reusable React components, quantity controls, cart totals, and automated testing using Vitest and React Testing Library.",
+    technologies: [
+      "React",
+      "JavaScript",
+      "CSS",
+      "React Router",
+      "Vitest"
+    ],
+    github_url: nil,
+    live_url: nil,
+    image_url: nil,
+    featured: true,
+    position: 3
+  },
+  {
+    title: "Weather Dashboard",
+    description: "A responsive weather dashboard with location search, current weather conditions, multi-day forecasts, weather icons, and external API integration using JavaScript and Webpack.",
+    technologies: [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Webpack",
+      "REST API"
+    ],
+    github_url: nil,
+    live_url: nil,
+    image_url: nil,
+    featured: true,
+    position: 4
+  }
+]
+
+projects.each do | attributes |
+  project = Project.find_or_initialize_by(
+    title: attributes[:title]
+  )
+
+  project.assign_attributes(attributes)
+  project.save!
+
+  puts "Seeded: #{project.title}"
+end
+
+puts "Total projects: #{Project.count}"

@@ -350,6 +350,7 @@ DEPENDENCIES
   debug
   image_processing (~> 1.2)
   kamal
+  minitest
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 8.1.4, >= 8.1.4.1)

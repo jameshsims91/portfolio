@@ -47,4 +47,9 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  # Minitest frameword for integration testing [https://github.com/minitest/minitest]
+  group :test do
+    gem "minitest"
+  end
 end
