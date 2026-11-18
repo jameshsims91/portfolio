@@ -166,7 +166,25 @@ export default function Contact() {
 
               <form onSubmit={handleSubmit}>
                 {/* Success Message */}
-                
+                {success && (
+                  <div
+                    className='alert alert-success contact-alert'
+                    role='alert'
+                  >
+                    {success}
+                  </div>
+                )}
+
+                {/* Error Message */}
+                {error && (
+                  <div
+                    className='alert alert-danger contact-alert'
+                    role='alert'
+                  >
+                    {error}
+                  </div>
+                )}
+
                 {/* Name */}
                 <div className='mb-4'>
                   <label
@@ -243,14 +261,23 @@ export default function Contact() {
                 <button
                   type='submit'
                   className='btn contact-submit-btn w-100'
+                  disabled={submitting}
                 >
-                  <Send size={18} aria-hidden='true' />
-                  Send Message
+                  {submitting ? (
+                    <>
+                      <span
+                        className='spinner-border spinner-border-sm'
+                        aria-hidden='true'
+                      />
+                      <span>Sending Message...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send size={18} aria-hidden='true' />
+                      <span>Send Message</span>
+                    </>
+                  )}
                 </button>
-
-                <p className='contact-form-note mt-3 mb-0'>
-                  Form submissions are not enabled yet.
-                </p>
               </form>
             </div>
           </div>
