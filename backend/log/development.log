@@ -677,3 +677,33 @@ Processing by Api::ContactMessagesController#create as */*
 Completed 422 Unprocessable Content in 25ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 14.4ms)
 
 
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-18 09:05:00 -0500
+Processing by Api::ProjectsController#index as */*
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-18 09:05:00 -0500
+Processing by Api::ProjectsController#index as */*
+  [1m[36mProject Load (25.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 52ms (Views: 0.2ms | ActiveRecord: 37.1ms (1 query, 0 cached) | GC: 34.9ms)
+
+
+  [1m[36mProject Load (39.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 46ms (Views: 0.1ms | ActiveRecord: 58.9ms (1 query, 0 cached) | GC: 30.6ms)
+
+
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-18 10:13:41 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by Api::ProjectsController#index as */*
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 26ms (Views: 0.2ms | ActiveRecord: 6.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-18 10:23:14 -0500
+Processing by Api::ProjectsController#index as */*
+  [1m[36mProject Load (14.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 21.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+

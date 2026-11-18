@@ -5,7 +5,7 @@ module Api
 
       if contact_message.save
         render json: {
-          message: "Your message has been received successfully. I will get back to you shortly."
+          message: "Your message has been received successfully."
         }, status: :created
       else
         render json: {
