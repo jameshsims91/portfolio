@@ -181,6 +181,10 @@
     padding: 3.5rem 0;
   }
 
+  .hero-section .row.g-5 {
+    --bs-gutter-x: 1.5rem;
+  }
+
   .hero-title {
     font-size: clamp(2rem, 9vw, 2.75rem);
   }
