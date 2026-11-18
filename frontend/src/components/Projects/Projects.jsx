@@ -20,6 +20,8 @@ function ProjectImage({ project }) {
         alt={`Screenshot of ${project.title}`}
         className='projects-image'
         loading='lazy'
+        decoding='async'
+        fetchPriority='low'
         onError={() => setImageError(true)}
       />
     </div>

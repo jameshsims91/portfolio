@@ -16,4 +16,4 @@
 /backend/tmp/*
 !/backend/tmp/.keep
 /backend/storage/*
-!/backend/storage/.keep
+!/backend/storage/.keepbackend/log/*.log
