@@ -10,9 +10,9 @@ projects = [
       'PostgreSQL',
       'REST API'
     ],
-    github_url: nil,
-    live_url: nil,
-    image_url: nil,
+    github_url: "https://github.com/jameshsims91/messaging-app",
+    live_url: "https://messaging-app-kuax.onrender.com/",
+    image_url: "/projects/messaging-app.webp",
     featured: true,
     position: 1
   },
@@ -42,9 +42,9 @@ projects = [
       "React Router",
       "Vitest"
     ],
-    github_url: nil,
-    live_url: nil,
-    image_url: nil,
+    github_url: "https://github.com/jameshsims91/shopping-cart",
+    live_url: "https://jameshsims.me/shopping-cart/",
+    image_url: "/projects/shopping-cart.webp",
     featured: true,
     position: 3
   },
@@ -58,9 +58,9 @@ projects = [
       "Webpack",
       "REST API"
     ],
-    github_url: nil,
-    live_url: nil,
-    image_url: nil,
+    github_url: "https://github.com/jameshsims91/weather-app",
+    live_url: "https://jameshsims.me/weather-app/",
+    image_url: "/projects/weather-app.webp",
     featured: true,
     position: 4
   }

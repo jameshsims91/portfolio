@@ -31,8 +31,8 @@ export default function Navbar() {
         <div className={`collapse navbar-collapse ${menuOpen ? 'show' : ''}`} id='portfolioNavbar'>
           <ul className='navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-3'>
             <li className='nav-item'>
-              <a className='nav-link' href='#projects' onClick={closeMenu}>
-                Projects
+              <a className='nav-link' href='#about' onClick={closeMenu}>
+                About
               </a>
             </li>
             <li className='nav-item'>
@@ -41,8 +41,8 @@ export default function Navbar() {
               </a>
             </li>
             <li className='nav-item'>
-              <a className='nav-link' href='#about' onClick={closeMenu}>
-                About
+              <a className='nav-link' href='#projects' onClick={closeMenu}>
+                Projects
               </a>
             </li>
             <li className='nav-item'>

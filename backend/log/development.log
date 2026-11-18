@@ -301,3 +301,317 @@ Processing by Api::ProjectsController#index as HTML
 Completed 200 OK in 23ms (Views: 0.1ms | ActiveRecord: 4.5ms (1 query, 0 cached) | GC: 1.0ms)
 
 
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-17 20:43:57 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by Api::ProjectsController#index as */*
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 28ms (Views: 0.2ms | ActiveRecord: 5.6ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-17 20:44:57 -0500
+Processing by Api::ProjectsController#index as */*
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-17 21:06:58 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by Api::ProjectsController#index as */*
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 28ms (Views: 0.1ms | ActiveRecord: 4.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'React Shopping Cart' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mProject Update (0.6ms)[0m  [1m[33mUPDATE "projects" SET "image_url" = '/projects/shopping-cart.webp', "updated_at" = '2026-11-18 03:21:57.452962' WHERE "projects"."id" = 3 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-17 22:22:05 -0500
+Processing by Api::ProjectsController#index as */*
+  [1m[36mProject Load (6.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 9.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Weather Dashboard' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mProject Update (0.4ms)[0m  [1m[33mUPDATE "projects" SET "image_url" = '/projects/weather-dashboard.webp', "updated_at" = '2026-11-18 03:23:03.922949' WHERE "projects"."id" = 4 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Full-Stack Messaging App' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mProject Update (0.3ms)[0m  [1m[33mUPDATE "projects" SET "image_url" = '/projects/messaging-app.webp', "updated_at" = '2026-11-18 03:23:52.245818' WHERE "projects"."id" = 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mProject Pluck (0.5ms)[0m  [1m[34mSELECT "projects"."title", "projects"."image_url" FROM "projects" ORDER BY "projects"."position" ASC, "projects"."id" ASC /*application='Backend'*/[0m
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Full-Stack Messaging App' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mProject Update (0.9ms)[0m  [1m[33mUPDATE "projects" SET "image_url" = NULL, "updated_at" = '2026-11-18 03:25:01.015552' WHERE "projects"."id" = 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Photo Tagging Game' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'React Shopping Cart' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mProject Update (0.5ms)[0m  [1m[33mUPDATE "projects" SET "image_url" = NULL, "updated_at" = '2026-11-18 03:25:01.021516' WHERE "projects"."id" = 3 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Weather Dashboard' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mProject Update (0.7ms)[0m  [1m[33mUPDATE "projects" SET "image_url" = NULL, "updated_at" = '2026-11-18 03:25:01.024732' WHERE "projects"."id" = 4 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mProject Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" /*application='Backend'*/[0m
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-17 22:25:05 -0500
+Processing by Api::ProjectsController#index as */*
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-17 22:33:18 -0500
+Processing by Api::ProjectsController#index as */*
+  [1m[36mProject Load (9.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 13.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-17 22:36:54 -0500
+Processing by Api::ProjectsController#index as HTML
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+  [1m[36mProject Pluck (0.3ms)[0m  [1m[34mSELECT "projects"."title", "projects"."image_url" FROM "projects" ORDER BY "projects"."position" ASC, "projects"."id" ASC /*application='Backend'*/[0m
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Full-Stack Messaging App' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mProject Update (0.6ms)[0m  [1m[33mUPDATE "projects" SET "image_url" = '/projects/messaging-app.webp', "updated_at" = '2026-11-18 03:39:04.185123' WHERE "projects"."id" = 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Full-Stack Messaging App' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = 1 LIMIT 1 /*application='Backend'*/[0m
+Started GET "/api/projects?utm_source=chatgpt.com" for 127.0.0.1 at 2026-11-17 22:42:52 -0500
+Processing by Api::ProjectsController#index as HTML
+  Parameters: {"utm_source" => "chatgpt.com"}
+  [1m[36mProject Load (6.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 9.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'React Shopping Cart' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mProject Update (0.5ms)[0m  [1m[33mUPDATE "projects" SET "image_url" = '/projects/shopping-cart.webp', "updated_at" = '2026-11-18 03:44:56.708459' WHERE "projects"."id" = 3 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'React Shopping Cart' LIMIT 1 /*application='Backend'*/[0m
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-17 22:46:17 -0500
+Processing by Api::ProjectsController#index as HTML
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Weather Dashboard' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mProject Update (0.4ms)[0m  [1m[33mUPDATE "projects" SET "image_url" = '/projects/weather-app.webp', "updated_at" = '2026-11-18 03:47:19.971866' WHERE "projects"."id" = 4 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Weather Dashboard' LIMIT 1 /*application='Backend'*/[0m
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-17 22:48:01 -0500
+Processing by Api::ProjectsController#index as HTML
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-17 22:48:06 -0500
+Processing by Api::ProjectsController#index as */*
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mProject Pluck (0.6ms)[0m  [1m[34mSELECT "projects"."title", "projects"."github_url" FROM "projects" ORDER BY "projects"."position" ASC, "projects"."id" ASC /*application='Backend'*/[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Full Stack Messaging App' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Full-Stack Messaging App' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mProject Update (0.8ms)[0m  [1m[33mUPDATE "projects" SET "github_url" = 'https://github.com/jameshsims91/messaging-app', "updated_at" = '2026-11-18 03:52:06.989173' WHERE "projects"."id" = 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = 1 LIMIT 1 /*application='Backend'*/[0m
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-17 22:52:40 -0500
+Processing by Api::ProjectsController#index as HTML
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-17 22:53:09 -0500
+Processing by Api::ProjectsController#index as */*
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Full-Stack Messaging App' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mProject Update (0.9ms)[0m  [1m[33mUPDATE "projects" SET "image_url" = NULL, "updated_at" = '2026-11-18 04:01:40.102732' WHERE "projects"."id" = 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Photo Tagging Game' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'React Shopping Cart' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mProject Update (0.7ms)[0m  [1m[33mUPDATE "projects" SET "image_url" = NULL, "updated_at" = '2026-11-18 04:01:40.109332' WHERE "projects"."id" = 3 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Weather Dashboard' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mProject Update (0.9ms)[0m  [1m[33mUPDATE "projects" SET "image_url" = NULL, "updated_at" = '2026-11-18 04:01:40.113287' WHERE "projects"."id" = 4 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mProject Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" /*application='Backend'*/[0m
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-17 23:01:52 -0500
+Processing by Api::ProjectsController#index as */*
+  [1m[36mProject Load (6.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 9.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Full-Stack Messaging App' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mProject Update (0.9ms)[0m  [1m[33mUPDATE "projects" SET "image_url" = '/projects/shopping-app.webp', "updated_at" = '2026-11-18 04:03:39.713282' WHERE "projects"."id" = 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Full-Stack Messaging App' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mProject Update (1.3ms)[0m  [1m[33mUPDATE "projects" SET "image_url" = '/projects/messaging-app.webp', "updated_at" = '2026-11-18 04:04:48.741963' WHERE "projects"."id" = 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Photo Tagging Game' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'React Shopping Cart' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Weather Dashboard' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mProject Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" /*application='Backend'*/[0m
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-17 23:04:51 -0500
+Processing by Api::ProjectsController#index as */*
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-17 23:06:05 -0500
+Processing by Api::ProjectsController#index as */*
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'React Shopping Cart' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mProject Update (0.9ms)[0m  [1m[33mUPDATE "projects" SET "github_url" = 'https://github.com/jameshsims91/shopping-cart', "updated_at" = '2026-11-18 04:09:06.629755' WHERE "projects"."id" = 3 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = 3 LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mProject Update (0.5ms)[0m  [1m[33mUPDATE "projects" SET "image_url" = '/projects/shopping-cart.webp', "updated_at" = '2026-11-18 04:09:44.688503' WHERE "projects"."id" = 3 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = 3 LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Weather Dashboard' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mProject Update (0.7ms)[0m  [1m[33mUPDATE "projects" SET "github_url" = 'https://github.com/jameshsims91/weather-app', "updated_at" = '2026-11-18 04:11:51.577412' WHERE "projects"."id" = 4 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = 4 LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mProject Update (0.6ms)[0m  [1m[33mUPDATE "projects" SET "image_url" = '/projects/weather-app.webp', "updated_at" = '2026-11-18 04:12:21.311071' WHERE "projects"."id" = 4 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = 4 LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mProject Pluck (0.5ms)[0m  [1m[34mSELECT "projects"."title", "projects"."github_url", "projects"."image_url" FROM "projects" ORDER BY "projects"."position" ASC, "projects"."id" ASC /*application='Backend'*/[0m
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Full-Stack Messaging App' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Photo Tagging Game' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'React Shopping Cart' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Weather Dashboard' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mProject Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" /*application='Backend'*/[0m
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-17 23:13:55 -0500
+Processing by Api::ProjectsController#index as */*
+  [1m[36mProject Load (6.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 9.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-17 23:18:22 -0500
+Processing by Api::ProjectsController#index as */*
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-17 23:19:12 -0500
+Processing by Api::ProjectsController#index as */*
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Full-Stack Messaging App' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mProject Update (0.7ms)[0m  [1m[33mUPDATE "projects" SET "live_url" = 'https://messaging-app-kuax.onrender.com/', "updated_at" = '2026-11-18 04:23:17.790899' WHERE "projects"."id" = 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = 1 LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'React Shopping Cart' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mProject Update (0.6ms)[0m  [1m[33mUPDATE "projects" SET "live_url" = 'https://jameshsims.me/shopping-cart/', "updated_at" = '2026-11-18 04:24:30.532730' WHERE "projects"."id" = 3 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = 3 LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Weather Dashboard' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mProject Update (0.6ms)[0m  [1m[33mUPDATE "projects" SET "live_url" = 'https://jameshsims.me/weather-app/', "updated_at" = '2026-11-18 04:26:04.045595' WHERE "projects"."id" = 4 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = 4 LIMIT 1 /*application='Backend'*/[0m
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Full-Stack Messaging App' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Photo Tagging Game' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'React Shopping Cart' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."title" = 'Weather Dashboard' LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mProject Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" /*application='Backend'*/[0m
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-17 23:26:34 -0500
+Processing by Api::ProjectsController#index as */*
+  [1m[36mProject Load (10.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 13.6ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+  [1m[36mProject Pluck (0.3ms)[0m  [1m[34mSELECT "projects"."title", "projects"."live_url" FROM "projects" ORDER BY "projects"."position" ASC, "projects"."id" ASC /*application='Backend'*/[0m
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-17 23:29:44 -0500
+Processing by Api::ProjectsController#index as */*
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-17 23:30:40 -0500
+Processing by Api::ProjectsController#index as */*
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-17 23:33:05 -0500
+Processing by Api::ProjectsController#index as */*
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-17 23:33:05 -0500
+Processing by Api::ProjectsController#index as */*
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+

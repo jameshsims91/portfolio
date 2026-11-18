@@ -2,6 +2,30 @@ import { useEffect, useState } from 'react'
 import { Code2, ExternalLink, GitBranch } from 'lucide-react'
 import './Projects.css'
 
+function ProjectImage({ project }) {
+  const [imageError, setImageError] = useState(false)
+
+  if (!project.image_url || imageError) {
+    return (
+      <div className='projects-image-placeholder'>
+        <Code2 size={42} aria-hidden='true' />
+      </div>
+    )
+  }
+
+  return (
+    <div className='projects-image-wrapper'>
+      <img
+        src={project.image_url}
+        alt={`Screenshot of ${project.title}`}
+        className='projects-image'
+        loading='lazy'
+        onError={() => setImageError(true)}
+      />
+    </div>
+  )
+}
+
 export default function Projects() {
   const [projects, setProjects] = useState([])
   const [loading, setLoading] = useState(true)
@@ -101,9 +125,7 @@ export default function Projects() {
               <div className='col' key={project.id}>
                 <article className='card projects-card h-100'>
                   {/* Image Placeholder */}
-                  <div className='projects-image-placeholder'>
-                    <Code2 size={42} aria-hidden='true' />
-                  </div>
+                  <ProjectImage project={project} />
 
                   <div className='card-body d-flex flex-column'>
                     <h3 className='projects-card-title'>
@@ -126,32 +148,31 @@ export default function Projects() {
                       ))}
                     </ul>
 
-                    {/* Project Links */}
-                    <div className='projects-links mt-auto'>
+                    {/* Project Action Links */}
+                    <div className="projects-links mt-auto">
                       {project.github_url && (
                         <a
                           href={project.github_url}
-                          target='_blank'
-                          rel='projects-link'
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="projects-link"
                           aria-label={`View ${project.title} on GitHub`}
                         >
-                          <GitBranch size={18} aria-hidden='true' />
-                            Github
+                          <GitBranch size={18} aria-hidden="true" />
+                          <span>GitHub</span>
                         </a>
                       )}
 
                       {project.live_url && (
                         <a
                           href={project.live_url}
-                          target='_blank'
-                          rel='noopener noreferrer'
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="projects-link projects-live-btn"
                           aria-label={`View live demo of ${project.title}`}
                         >
-                          <ExternalLink
-                            size={18}
-                            aria-hidden='true'
-                          />
-                            Live Demo
+                          <ExternalLink size={18} aria-hidden="true" />
+                          <span>Live Demo</span>
                         </a>
                       )}
                     </div>
