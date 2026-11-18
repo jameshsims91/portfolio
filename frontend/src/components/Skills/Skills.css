@@ -1,0 +1,160 @@
+.skills-section {
+  background-color: #0b1120;
+  color: #ffffff;
+  padding: 6rem 0;
+  scroll-margin-top: 90px;
+}
+
+/* Section Heading */
+
+.skills-label {
+  color: #a5b4fc;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.skills-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.skills-title span {
+  color: #818cf8;
+}
+
+.skills-heading-line {
+  width: 50px;
+  height: 4px;
+  background-color: #6366f1;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.skills-intro {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 650px;
+}
+
+/* Skills Cards */
+
+.skills-card {
+  background-color: #17243a;
+  border: 1px solid #334155;
+  border-radius: 1rem;
+  padding: 2rem;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.skills-card:hover {
+  transform: translateY(-5px);
+  border-color: #6366f1;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.skills-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.skills-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  border-radius: 0.85rem;
+  background-color: rgba(99, 102, 241, 0.12);
+  color: #a5b4fc;
+}
+
+.skills-card-title {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Technology Badges */
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skills-badge {
+  background-color: #273653;
+  color: #e2e8f0;
+  border: 1px solid #3b4c68;
+  border-radius: 0.5rem;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Tablet */
+
+@media (max-width: 991.98px) {
+  .skills-section {
+    padding: 5rem 0;
+  }
+
+  .skills-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 575.98px) {
+  .skills-section {
+    padding: 3.5rem 0;
+  }
+
+  .skills-card {
+    padding: 1.25rem;
+  }
+
+  .skills-card-title {
+    font-size: 1.1rem;
+  }
+
+  .skills-icon-wrapper {
+    width: 46px;
+    height: 46px;
+  }
+
+  .skills-badge {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-card {
+    transition: none;
+  }
+
+  .skills-card:hover {
+    transform: none;
+  }
+}
+
