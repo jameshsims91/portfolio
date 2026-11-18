@@ -1,0 +1,151 @@
+
+.projects-section {
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 6rem 0;
+  scroll-margin-top: 90px;
+}
+
+/* Section Heading */
+
+.projects-label {
+  color: #a5b4fc;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.projects-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.projects-title span {
+  color: #818cf8;
+}
+
+.projects-heading-line {
+  width: 50px;
+  height: 4px;
+  background-color: #6366f1;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.projects-intro {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 650px;
+}
+
+/* Project Cards */
+
+.projects-card {
+  background-color: #17243a;
+  border: 1px solid #334155;
+  border-radius: 1rem;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.projects-image-placeholder {
+  height: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #253450;
+  color: #a5b4fc;
+}
+
+.projects-card .card-body {
+  padding: 1.5rem;
+}
+
+.projects-card-title {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.projects-card-description {
+  color: #cbd5e1;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+/* Technologies */
+
+.projects-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 1.5rem;
+}
+
+.projects-tech-badge {
+  color: #c7d2fe;
+  background-color: #273653;
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.4rem;
+  font-size: 0.8rem;
+}
+
+/* Links */
+
+.projects-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.projects-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #a5b4fc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.projects-link:hover {
+  color: #ffffff;
+}
+
+.projects-link:focus-visible {
+  outline: 2px solid #a5b4fc;
+  outline-offset: 4px;
+}
+
+.projects-empty {
+  color: #cbd5e1;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+/* Responsive */
+
+@media (max-width: 991.98px) {
+  .projects-section {
+    padding: 5rem 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .projects-section {
+    padding: 3.5rem 0;
+  }
+
+  .projects-image-placeholder {
+    height: 160px;
+  }
+
+  .projects-card .card-body {
+    padding: 1.25rem;
+  }
+}
