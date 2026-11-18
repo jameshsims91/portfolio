@@ -13,7 +13,7 @@ export default function Navbar() {
     <nav className='navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm'>
       <div className='container'>
         <a className='navbar-brand fw-bold' href='#top' onClick={closeMenu}>
-          <img src={headshot} alt='Headshot' className='img-fluid rounded-circle mx-auto p-2' style={{ width: '50px', height: '50px', objectFit: 'cover' }} />
+          <img src={headshot} alt='Portrait of James Sims' className='img-fluid rounded-circle mx-auto p-2' style={{ width: '50px', height: '50px', objectFit: 'cover' }} />
           <span>James Sims</span>
         </a>
 
