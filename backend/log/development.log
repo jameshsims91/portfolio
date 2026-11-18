@@ -855,3 +855,34 @@ Processing by Api::ContactMessagesController#create as */*
 Completed 201 Created in 18ms (Views: 0.2ms | ActiveRecord: 7.1ms (1 query, 0 cached) | GC: 0.1ms)
 
 
+Started GET "/api/projects" for 127.0.0.1 at 2026-11-18 14:04:46 -0500
+Processing by Api::ProjectsController#index as */*
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."featured" = TRUE ORDER BY "projects"."position" ASC, "projects"."id" ASC /*action='index',application='Backend',controller='projects'*/[0m
+  ↳ app/controllers/api/projects_controller.rb:6:in 'Api::ProjectsController#index'
+Completed 200 OK in 23ms (Views: 0.2ms | ActiveRecord: 6.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/api/contact_messages" for 127.0.0.1 at 2026-11-18 14:09:33 -0500
+Processing by Api::ContactMessagesController#create as */*
+  Parameters: {"contact_message" => {"name" => "James Sims", "email" => "[FILTERED]", "message" => "I would like to reach out to you regarding an opportunity.", "website" => ""}}
+[31mUnpermitted parameter: :website. Context: { controller: Api::ContactMessagesController, action: create, request: #<ActionDispatch::Request:0x000073b551ca6e10>, params: {"contact_message" => {"name" => "James Sims", "email" => "[FILTERED]", "message" => "I would like to reach out to you regarding an opportunity.", "website" => ""}, "controller" => "api/contact_messages", "action" => "create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='contact_messages'*/[0m
+  ↳ app/controllers/api/contact_messages_controller.rb:22:in 'Api::ContactMessagesController#create'
+  [1m[36mContactMessage Create (1.3ms)[0m  [1m[32mINSERT INTO "contact_messages" ("name", "email", "message", "created_at", "updated_at") VALUES ('James Sims', 'test@example.com', 'I would like to reach out to you regarding an opportunity.', '2026-11-18 19:09:33.239162', '2026-11-18 19:09:33.239162') RETURNING "id" /*action='create',application='Backend',controller='contact_messages'*/[0m
+  ↳ app/controllers/api/contact_messages_controller.rb:22:in 'Api::ContactMessagesController#create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT /*action='create',application='Backend',controller='contact_messages'*/[0m
+  ↳ app/controllers/api/contact_messages_controller.rb:22:in 'Api::ContactMessagesController#create'
+Completed 201 Created in 6ms (Views: 0.1ms | ActiveRecord: 3.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+  [1m[36mContactMessage Load (0.4ms)[0m  [1m[34mSELECT "contact_messages".* FROM "contact_messages" ORDER BY "contact_messages"."id" DESC LIMIT 5 /*application='Backend'*/[0m
+  [1m[36mContactMessage Load (0.4ms)[0m  [1m[34mSELECT "contact_messages".* FROM "contact_messages" WHERE "contact_messages"."id" = 10 LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mContactMessage Destroy (0.4ms)[0m  [1m[31mDELETE FROM "contact_messages" WHERE "contact_messages"."id" = 10 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mContactMessage Load (0.3ms)[0m  [1m[34mSELECT "contact_messages".* FROM "contact_messages" WHERE "contact_messages"."id" = 11 LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mContactMessage Destroy (0.3ms)[0m  [1m[31mDELETE FROM "contact_messages" WHERE "contact_messages"."id" = 11 /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[36mContactMessage Load (0.3ms)[0m  [1m[34mSELECT "contact_messages".* FROM "contact_messages" ORDER BY "contact_messages"."id" DESC LIMIT 10 /*application='Backend'*/[0m

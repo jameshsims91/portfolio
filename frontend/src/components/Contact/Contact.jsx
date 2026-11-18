@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Mail, Send } from 'lucide-react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import './Contact.css'
@@ -15,6 +15,14 @@ export default function Contact() {
   const [submitting, setSubmitting] = useState(false)
   const [success, setSuccess] = useState('')
   const [error, setError] = useState('')
+
+  const errorRef = useRef(null)
+
+  useEffect(() => {
+    if (error && errorRef.current) {
+      errorRef.current.focus()
+    }
+  }, [error])
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -171,19 +179,24 @@ export default function Contact() {
                 {success && (
                   <div
                     className='alert alert-success contact-alert'
-                    role='alert'
+                    role='status'
+                    aria-live='polite'
                   >
-                    {success}
+                    <strong>Message received!</strong>
+                    <p className='mb-0 mt-1'>{success}</p>
                   </div>
                 )}
 
                 {/* Error Message */}
                 {error && (
                   <div
+                    ref={errorRef}
                     className='alert alert-danger contact-alert'
                     role='alert'
+                    tabIndex={-1}
                   >
-                    {error}
+                    <strong>Message not sent.</strong>
+                    <p className='mb-0 mt-1'>{error}</p>
                   </div>
                 )}
 
@@ -223,6 +236,7 @@ export default function Contact() {
                     onChange={handleChange}
                     maxLength={100}
                     autoComplete='name'
+                    aria-label='Your full name'
                     required
                   />
                 </div>
@@ -259,6 +273,10 @@ export default function Contact() {
                     Your Message
                   </label>
 
+                  <p id='contact-message-help' className='contact-field-help'>
+                    Please enter at least 10 characters.
+                  </p>
+
                   <textarea
                     id='contact-message'
                     name='message'
@@ -269,9 +287,13 @@ export default function Contact() {
                     onChange={handleChange}
                     minLength={10}
                     maxLength={5000}
+                    aria-describedby='contact-message-help contact-character-count'
                     required
                   />
-                  <div className='contact-character-count'>
+                  <div 
+                    id='contact-character-count'
+                    className='contact-character-count'
+                  >
                     {formData.message.length} / 5000 characters
                   </div>
                 </div>
@@ -281,6 +303,7 @@ export default function Contact() {
                   type='submit'
                   className='btn contact-submit-btn w-100'
                   disabled={submitting}
+                  aria-busy={submitting}
                 >
                   {submitting ? (
                     <>
