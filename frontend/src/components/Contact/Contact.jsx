@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Mail, Send } from 'lucide-react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { apiUrl } from '../../config/api'
 import './Contact.css'
 
 const initialFormData = {
@@ -47,7 +48,7 @@ export default function Contact() {
     setError('')
 
     try {
-      const response = await fetch('/api/contact_messages', {
+      const response = await fetch(apiUrl('/api/contact_messages'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -4,7 +4,7 @@
 .env.*
 !.env.example
 
-# Rails encryption keys
+# Rails credentials and sensitive files
 
 /backend/config/master.key
 /backend/config/credentials/*.key
@@ -16,4 +16,9 @@
 /backend/tmp/*
 !/backend/tmp/.keep
 /backend/storage/*
-!/backend/storage/.keepbackend/log/*.log
+!/backend/storage/
+.keepbackend/log/*.log
+
+# Rails local environment variables
+/backend/.env
+/backend/.env.*

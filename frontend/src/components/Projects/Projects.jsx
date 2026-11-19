@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Code2, ExternalLink, GitBranch } from 'lucide-react'
+import { apiUrl } from '../../config/api'
 import './Projects.css'
 
 function ProjectImage({ project }) {
@@ -41,7 +42,7 @@ export default function Projects() {
         setLoading(true)
         setError(null)
 
-        const response = await fetch('/api/projects', {
+        const response = await fetch(apiUrl('/api/projects'), {
           signal: controller.signal,
         })
 
