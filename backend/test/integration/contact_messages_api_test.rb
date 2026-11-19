@@ -1,6 +1,7 @@
 require "test_helper"
 
 class ContactMessagesApiTest < ActionDispatch::IntegrationTest
+  include ActiveJob::TestHelper
   setup do
     @valid_params = {
       contact_message: {
@@ -13,8 +14,11 @@ class ContactMessagesApiTest < ActionDispatch::IntegrationTest
 
   test "POST /api/contact_messages creates a valid message" do
     assert_difference "ContactMessage.count", 1 do
-      post "/api/contact_messages", params: @valid_params,
-                                    as: :json
+      assert_enqueued_emails 1 do
+        post "/api/contact_messages",
+             params: @valid_params,
+             as: :json
+      end
     end
 
     assert_response :created
@@ -61,7 +65,7 @@ class ContactMessagesApiTest < ActionDispatch::IntegrationTest
         email: "not-an-email"
       )
     }
-    
+
     assert_no_difference "ContactMessage.count" do
       post "/api/contact_messages", params: invalid_params,
                                     as: :json
@@ -136,9 +140,11 @@ class ContactMessagesApiTest < ActionDispatch::IntegrationTest
     }
 
     assert_no_difference "ContactMessage.count" do
-      post "/api/contact_messages",
-           params: spam_params,
-           as: :json
+      assert_enqueued_emails 0 do
+        post "/api/contact_messages",
+             params: spam_params,
+             as: :json
+      end
     end
 
     assert_response :created

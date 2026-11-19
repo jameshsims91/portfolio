@@ -1,0 +1,20 @@
+New Portfolio Contact Message
+==============================
+
+You received a new contact message through your portfolio contact form.
+
+Submitted: <%= @contact_message.created_at.in_time_zone("America/New_York").strftime("%B %d, %Y at %I:%M:%S %p %Z") %>
+
+Name: <%= @contact_message.name %>
+Email: <%= @contact_message.email %>
+
+Message:
+--------
+<%= @contact_message.message %>
+
+==============================
+
+This notification was sent from your portfolio at:
+https//jameshsims.tech
+
+To reply, use your email client's Reply button.

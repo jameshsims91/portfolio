@@ -16,10 +16,26 @@ module Api
           message: "Your message has been received successfully."
         }, status: :created
       end
-      
+
       contact_message = ContactMessage.new(contact_message_params)
 
       if contact_message.save
+        begin
+          queued_job = ContactNotificationMailer
+            .new_message(contact_message)
+            .deliver_later
+
+          unless queued_job
+            Rails.logger.error(
+              "Contact notification was not enqueued for message ##{contact_message.id}"
+            )
+          end
+        rescue SolidQueue::Job::EnqueueError => e
+          Rails.logger.error(
+            "Contact notification enqueue failed for message ##{contact_message.id}: #{e.class}"
+          )
+        end
+
         render json: {
           message: "Your message has been received successfully."
         }, status: :created
