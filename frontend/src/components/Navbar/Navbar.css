@@ -18,8 +18,13 @@
   color: #ffffff;
 }
 
-.navbar .nav-link.text-danger:hover {
-  color: #ff8b94 !important;
+.resume-link {
+  color: #ff6b78;
+}
+
+.resume-link:hover,
+.resume-link:focus-visible {
+  color: #ff9aa4;
 }
 
 @media (max-width: 991.98px) {

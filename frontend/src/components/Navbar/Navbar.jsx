@@ -46,7 +46,7 @@ export default function Navbar() {
               </a>
             </li>
             <li className='nav-item'>
-              <a className='nav-link fw-bold text-danger' href={resume} target='_blank' rel='noopener noreferrer' onClick={closeMenu} aria-label='View resume PDF in a new tab'>
+              <a className='nav-link fw-bold resume-link' href={resume} target='_blank' rel='noopener noreferrer' onClick={closeMenu} aria-label='View resume PDF in a new tab'>
                 Resume
               </a>
             </li>
