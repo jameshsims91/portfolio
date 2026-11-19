@@ -3,6 +3,8 @@ require "test_helper"
 class ContactMessagesApiTest < ActionDispatch::IntegrationTest
   include ActiveJob::TestHelper
   setup do
+    Rails.cache.clear
+
     @valid_params = {
       contact_message: {
         name: "Test Recruiter",
