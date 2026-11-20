@@ -3,10 +3,10 @@ class Project < ApplicationRecord
   validates :description, presence: true
 
   validates :technologies, presence: true
-  
+
   validates :position,
             numericality: {
-              only_integer: true, 
+              only_integer: true,
               greater_than_or_equal_to: 0
             }
 

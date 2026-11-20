@@ -50,7 +50,7 @@ class ContactMessagesApiTest < ActionDispatch::IntegrationTest
     }
 
     assert_no_difference "ContactMessage.count" do
-      post "/api/contact_messages", params:invalid_params,
+      post "/api/contact_messages", params: invalid_params,
                                     as: :json
     end
 

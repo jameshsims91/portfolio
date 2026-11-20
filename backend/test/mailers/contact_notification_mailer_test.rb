@@ -20,8 +20,8 @@ class ContactNotificationMailerTest < ActionMailer::TestCase
         contact_message
       ).deliver_now
 
-      assert_equal ["portfolio-owner@example.com"], email.to
-      assert_equal ["jane@example.com"], email.reply_to
+      assert_equal [ "portfolio-owner@example.com" ], email.to
+      assert_equal [ "jane@example.com" ], email.reply_to
 
       assert_equal(
         "New Portfolio Contact: Jane Developer",

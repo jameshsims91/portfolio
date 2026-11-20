@@ -7,7 +7,7 @@ class ProjectsApiTest < ActionDispatch::IntegrationTest
     @first_project = Project.create!(
       title: "Messaging App",
       description: "A full-stack messaging application.",
-      technologies: ["Rails", "React"],
+      technologies: [ "Rails", "React" ],
       featured: true,
       position: 1
     )
@@ -15,7 +15,7 @@ class ProjectsApiTest < ActionDispatch::IntegrationTest
     @second_project = Project.create!(
       title: "Shopping Cart",
       description: "A responsive shopping application.",
-      technologies: ["React", "JavaScript"],
+      technologies: [ "React", "JavaScript" ],
       featured: true,
       position: 2
     )
@@ -23,13 +23,13 @@ class ProjectsApiTest < ActionDispatch::IntegrationTest
     @hidden_project = Project.create!(
       title: "Unpublished Project",
       description: "This should not appear in the API.",
-      technologies: ["Ruby"],
+      technologies: [ "Ruby" ],
       featured: false,
       position: 3
     )
   end
 
-  test "GET /api/projects returns only featured projects" do 
+  test "GET /api/projects returns only featured projects" do
     get "/api/projects"
 
     assert_response :success
@@ -51,7 +51,7 @@ class ProjectsApiTest < ActionDispatch::IntegrationTest
     projects = JSON.parse(response.body)
 
     assert_equal(
-      ["Messaging App", "Shopping Cart"],
+      [ "Messaging App", "Shopping Cart" ],
       projects.map { |project| project["title"] }
     )
   end
@@ -77,7 +77,7 @@ class ProjectsApiTest < ActionDispatch::IntegrationTest
 
     assert_equal expected_keys.sort, first_project.keys.sort
 
-    assert_equal ["Rails", "React"],
+    assert_equal [ "Rails", "React" ],
                  first_project["technologies"]
   end
 

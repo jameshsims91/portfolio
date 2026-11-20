@@ -10,7 +10,7 @@ class CreateProjects < ActiveRecord::Migration[8.1]
       t.string :github_url
       t.string :live_url
       t.string :image_url
-      
+
       t.boolean :featured,
                 default: false,
                 null: false

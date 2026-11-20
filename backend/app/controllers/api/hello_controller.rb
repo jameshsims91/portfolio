@@ -1,5 +1,5 @@
 class Api::HelloController < ApplicationController
   def index
-    render json: { message: 'Hello from Rails!'}
+    render json: { message: "Hello from Rails!" }
   end
 end

@@ -5,6 +5,6 @@ Rails.application.routes.draw do
     resources :projects, only: [ :index ]
     resources :contact_messages, only: [ :create ]
   end
-  
+
   get "up" => "rails/health#show", as: :rails_health_check
 end
