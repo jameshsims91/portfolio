@@ -81,7 +81,7 @@ export default function Contact() {
       // Reset the form after a successful submission.
       setFormData(initialFormData)
     } catch (err) {
-      console.error('Contact from error: err')
+      console.error('Contact from error:', err)
 
       setError(
         err.message || 'Something went wrong. Please try again.'
