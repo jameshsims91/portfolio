@@ -119,6 +119,10 @@ jobs:
         working-directory: frontend
         run: npm run lint
 
+      - name: Test React components
+        working-directory: frontend
+        run: npm run test:run
+
       - name: Build React frontend
         working-directory: frontend
         run: npm run build
