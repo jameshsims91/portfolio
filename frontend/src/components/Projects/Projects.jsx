@@ -115,6 +115,16 @@ export default function Projects() {
         )}
 
         {/* Error State */}
+        {!loading && error && (
+          <div
+            className='projects-error text-center py-4'
+            role='alert'
+          >
+            <p className='mb-0'>{error}</p>
+          </div>
+        )}
+
+        {/* Empty State */}
         {!loading && !error && projects.length === 0 && (
           <p className='projects-empty'>
             No featured projects are available yet.
