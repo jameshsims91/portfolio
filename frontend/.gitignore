@@ -26,3 +26,7 @@ dist-ssr
 # Local environment overrides and secrets
 .env.local
 .env.*.local
+
+# Playwright test artifacts
+/playwright-report/
+/test-results/
