@@ -13,6 +13,15 @@ export default defineConfig({
       }
     }
   },
+  preview: {
+    proxy: {
+      '/api': {
+        target: 'https://api.jameshsims.tech',
+        changeOrigin: true,
+        secure: true,
+      }
+    }
+  },
   test: {
     environment: 'jsdom',
     globals: true,

@@ -1,0 +1,36 @@
+
+# James Sims — Full-Stack Software Engineer
+
+> Personal portfolio showcasing full-stack software engineering projects, technical skills, and professional experience.
+
+Website: https://jameshsims.tech/
+
+## About
+
+James Sims is a full-stack software developer specializing in Ruby on Rails, React, JavaScript, and modern web application development.
+
+## Projects
+
+- [Full-Stack Messaging App](https://github.com/jameshsims91/messaging-app): A Rails and React messaging application featuring authentication, user profiles, conversations, and REST APIs.
+- [React Shopping Cart](https://github.com/jameshsims91/shopping-cart): A responsive shopping application built with React and tested using Vitest.
+- [Weather Dashboard](https://github.com/jameshsims91/weather-app): A JavaScript weather application featuring forecasts and external API integration.
+- Photo Tagging Game: An interactive Rails and React game with server-side guess validation and leaderboard functionality.
+
+## Technical Skills
+
+- Ruby and Ruby on Rails
+- JavaScript and React
+- HTML, CSS, and responsive design
+- PostgreSQL and REST APIs
+- Automated testing with Vitest and Playwright
+- Git and GitHub Actions
+
+## Contact and Professional Profiles
+
+- Website: https://jameshsims.tech/
+- GitHub: https://github.com/jameshsims91
+- LinkedIn: https://www.linkedin.com/in/james-simsiv/
+
+## Usage
+
+Refer to the portfolio website for current project information and professional details.
