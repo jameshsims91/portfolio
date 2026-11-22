@@ -30,3 +30,7 @@ dist-ssr
 # Playwright test artifacts
 /playwright-report/
 /test-results/
+
+# Lighthouse reports
+/lighthouse-*.report.html
+/lighthouse-*.report.json
