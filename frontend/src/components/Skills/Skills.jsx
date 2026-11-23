@@ -13,6 +13,8 @@ const skillCategories = [
       'React',
       'Bootstrap',
       'Tailwind CSS',
+      'Responsive Design',
+      'Accessibility',
     ],
   },
   {
@@ -22,9 +24,9 @@ const skillCategories = [
     skills: [
       'Ruby',
       'Ruby on Rails',
-      'PostgreSQL',
       'RESTful APIs',
       'MVC Architecture',
+      'Authentication & Authorization',
     ],
   },
   {
@@ -42,11 +44,12 @@ const skillCategories = [
     icon: Wrench,
     skills: [
       'Git & GitHub',
+      'GitHub Actions',
       'Vite',
       'Vitest',
+      'Playwright',
       'Minitest',
-      'Jest',
-      'RSpec',
+      'CI/CD',
     ],
   },
 ]
@@ -68,7 +71,11 @@ export default function Skills() {
           <div className='skills-heading-line' />
 
           <p className='skills-intro mt-4'>
-            The tools and technologies I use to build responsive, reliable, and maintainable web applications. I am constantly learning and expanding my skill set to stay up-to-date with the latest trends and best practices in web development.
+            My technical toolkit spans frontend development,
+            backend APIs, databases, and automated testing.
+            I use these technologies to build accessible,
+            maintainable applications and deliver reliable
+            features from development through deployment.
           </p>
         </div>
 

@@ -21,7 +21,13 @@ export default function Hero() {
               </h1>
 
               <p className='hero-description mb-4'>
-                I'm a full-stack software developer focused on building responsive, accessible, and user-friendly web applications using React, JavaScript, Ruby on Rails, and PostgreSQL. I have a passion for creating seamless user experiences and writing clean, maintainable code. Let's build something amazing together!
+                I'm a full-stack software developer building responsive,
+                accessible web applications with React, JavaScript,
+                Ruby on Rails, and PostgreSQL. From authentication and
+                REST APIs to interactive user interfaces, I enjoy turning
+                ideas into reliable, thoughtfully designed software.
+                Explore my projects to see how I approach development,
+                testing, and problem-solving.
               </p>
 
               <div className='hero-actions d-flex flex-wrap gap-3'>
