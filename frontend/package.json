@@ -11,7 +11,8 @@
     "test": "vitest",
     "test:run": "vitest run",
     "test:e2e": "playwright test",
-    "test:production": "playwright test --config=playwright.production.config.js"
+    "test:production": "playwright test --config=playwright.production.config.js",
+    "capture:screenshots": "node scripts/capture-screenshots.mjs"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
