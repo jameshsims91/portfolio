@@ -25,7 +25,7 @@ describe('Hero component', () => {
 
     // Verify the introduction describes relevant technologies.
     const description = screen.getByText(
-      /I'm a full-stack software developer focused on building responsive/i
+      /I'm a full-stack software developer building responsive/i
     )
 
     expect(description).toHaveTextContent('React')

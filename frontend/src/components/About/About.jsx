@@ -9,17 +9,17 @@ const highlights = [
   },
   {
     title: 'Backend Development',
-    description: 'Ruby, Ruby on Rails, PostgreSQL, RESTful APIs, MVC Architecture, Authentication & Authorization, Testing (RSpec)',
+    description: 'Ruby, Ruby on Rails, PostgreSQL, RESTful APIs, MVC Architecture, Authentication & Authorization, Minitest',
     icon: Database,
   },
   {
     title: 'Development Workflow',
-    description: 'Git, Github, Automated Testing, Code Reviews',
+    description: 'Git, GitHub, GitHub Actions, Vitest, Playwright, Automated Testing, CI/CD',
     icon: GitBranch,
   },
   {
     title: 'Continuous Learning',
-    description: 'The Odin Project - Full Stack Ruby on Rails Curriculum, WordPress Development, Online Courses, Open Source Contributions, Tech Meetups',
+    description: 'The Odin Project — Full Stack Ruby on Rails, Independent Projects, Ruby and JavaScript Practice, Continuous Skill Development',
     icon: GraduationCap,
   }
 ]
@@ -54,15 +54,30 @@ export default function About() {
               </h3>
 
               <p>
-                I'm a full-stack software developer focused on building responsive, accessible, and maintainable web applications. I enjoy collaborating with others to create software that solves real-world problems and enhances user experiences. My goal is to continuously learn and grow as a developer while contributing to meaningful projects.
+                I'm a full-stack software developer who enjoys building
+                applications that combine intuitive user interfaces with
+                reliable backend systems. I work with React, JavaScript,
+                Ruby on Rails, and PostgreSQL to develop responsive,
+                accessible applications that solve practical problems.
               </p>
 
               <p>
-                My development experience includes working with a variety of technologies, including React, Ruby on Rails, PostgreSQL, and more.I enjoy exploring new tools and frameworks, and I'm always looking for opportunities to expand my skill set. I believe that software development is a constantly evolving field, and I strive to stay up-to-date with the latest trends and best practices.
+                My projects include a full-stack messaging application,
+                an interactive photo-tagging game, a React shopping cart,
+                and a weather dashboard. Through these projects, I've
+                gained hands-on experience with REST APIs, authentication,
+                database relationships, state management, and testing
+                frontend and backend functionality.
               </p>
 
               <p>
-                After complete the Odin Project's Full Stack Ruby on Rails curriculum, I've continued strengthening my skills through personal projects, projects involving REST APIs, authentication, database relationships, and more. I also enjoy contributing to open source projects and participating in online communities to share knowledge and learn from others.
+                After completing The Odin Project's Full Stack Ruby on
+                Rails curriculum, I've continued strengthening my skills
+                through independent projects, automated testing, and
+                deployment. I use tools such as Git, GitHub Actions,
+                Vitest, and Playwright to build, test, and improve my
+                applications. I'm excited to contribute these skills
+                to a collaborative software development team.
               </p>
             </div>
           </div>

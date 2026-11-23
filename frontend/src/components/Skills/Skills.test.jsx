@@ -45,25 +45,45 @@ describe('Skills component', () => {
   test.each([
     [
       'Frontend Development',
-      ['HTML5', 'CSS3', 'JavaScript', 'React', 'Bootstrap', 'Tailwind CSS'],
+      [
+        'HTML5',
+        'CSS3',
+        'JavaScript',
+        'React',
+        'Bootstrap',
+        'Tailwind CSS',
+        'Responsive Design',
+        'Accessibility',
+      ],
     ],
     [
       'Backend Development',
       [
         'Ruby',
         'Ruby on Rails',
-        'PostgreSQL',
         'RESTful APIs',
         'MVC Architecture',
+        'Authentication & Authorization',
       ],
     ],
     [
       'Databases',
-      ['PostgreSQL', 'SQLite'],
+      [
+        'PostgreSQL',
+        'SQLite',
+      ],
     ],
     [
       'Tools & Testing',
-      ['Git & GitHub', 'Vite', 'Vitest', 'Minitest', 'Jest', 'RSpec'],
+      [
+        'Git & GitHub',
+        'GitHub Actions',
+        'Vite',
+        'Vitest',
+        'Playwright',
+        'Minitest',
+        'CI/CD',
+      ],
     ],
   ])('renders the correct technologies under %s', (category, technologies) => {
     render(<Skills />)
