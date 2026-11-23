@@ -1,5 +1,6 @@
 import { chromium } from '@playwright/test'
-import { mkdir } from 'node:fs/promises'
+import { mkdir, readFile } from 'node:fs/promises'
+import sharp from 'sharp'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -25,6 +26,38 @@ const configurations = [
     hasTouch: true,
   },
 ]
+
+async function imagesAreIdentical(newImage, existingPath) {
+  let existingImage
+
+  try {
+    existingImage = await readFile(existingPath)
+  } catch (error) {
+    if (error.code === 'ENOENT') {
+      return false
+    }
+
+    throw error
+  }
+
+  const decode = (image) =>
+    sharp(image)
+      .ensureAlpha()
+      .raw()
+      .toBuffer({ resolveWithObject: true })
+
+  const [newPixels, existingPixels] = await Promise.all([
+    decode(newImage),
+    decode(existingImage),
+  ])
+
+  return (
+    newPixels.info.width === existingPixels.info.width &&
+    newPixels.info.height === existingPixels.info.height &&
+    newPixels.info.channels === existingPixels.info.channels &&
+    newPixels.data.equals(existingPixels.data)
+  )
+}
 
 async function captureScreenshot(browser, configuration) {
   const context = await browser.newContext({
@@ -68,14 +101,27 @@ async function captureScreenshot(browser, configuration) {
     const filename = `${configuration.name}.png`
     const outputPath = path.join(screenshotDirectory, filename)
 
-    await page.screenshot({
-      path: outputPath,
+    const screenshot = await page.screenshot({
       fullPage: true,
       animations: 'disabled',
       caret: 'hide',
     })
 
-    console.log(`Saved: docs/screenshots/${filename}`)
+    // Preserve existing optimized screenshots when pixels are identical.
+    if (await imagesAreIdentical(screenshot, outputPath)) {
+      console.log(`Unchanged: docs/screenshots/${filename}`)
+      return
+    }
+
+    // Losslessly optimize and save screenshots when their pixels change.
+    await sharp(screenshot)
+      .png({
+        compressionLevel: 9,
+        palette: false,
+      })
+      .toFile(outputPath)
+
+    console.log(`Updated: docs/screenshots/${filename}`)
   } finally {
     await context.close()
   }
