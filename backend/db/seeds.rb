@@ -2,7 +2,7 @@
 projects = [
   {
     title: "OdinBook — Social Networking Platform",
-    description: "A production-deployed social networking platform featuring secure authentication, personalized profiles, social feeds, friendships, notifications, and private image storage. Includes an isolated, read-only recruiter demo, 115 automated tests, and a continuous integration and deployment pipeline.",
+    description: "A production-deployed social networking platform featuring secure authentication, personalized profiles, social feeds, friendships, notifications, and private image storage. Includes an isolated, read-only recruiter demo, 122 automated tests, sensitive URL logging protection, and a continuous integration and deployment pipeline.",
     technologies: [
       "Ruby",
       "Ruby on Rails",
