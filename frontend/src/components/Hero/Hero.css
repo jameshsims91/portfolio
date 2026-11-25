@@ -198,3 +198,18 @@
     font-size: 0.7rem;
   }
 }
+
+/* Consistent Hero content alignment */
+.hero-content {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.hero-description {
+  margin-inline: auto;
+}
+
+.hero-label,
+.hero-actions {
+  justify-content: center;
+}

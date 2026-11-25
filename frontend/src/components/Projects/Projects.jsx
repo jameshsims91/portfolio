@@ -91,7 +91,7 @@ export default function Projects() {
 
           <div className='projects-heading-line' />
 
-          <p className='projects-into mt-4'>
+          <p className='projects-intro mt-4'>
             A selection of applications I've developed using modern frontend and backend technologies. Each project highlights my skills in web development, problem-solving, and creating user-friendly interfaces.
           </p>
         </div>

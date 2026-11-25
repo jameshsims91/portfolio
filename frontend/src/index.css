@@ -118,3 +118,25 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+/* Center section headings and introductory text */
+.about-heading,
+.skills-heading,
+.projects-heading,
+.contact-heading {
+  text-align: center;
+}
+
+.about-heading-line,
+.skills-heading-line,
+.projects-heading-line,
+.contact-heading-line {
+  margin-inline: auto;
+}
+
+.skills-intro,
+.projects-intro,
+.contact-intro {
+  margin-inline: auto;
+  text-align: center;
+}
