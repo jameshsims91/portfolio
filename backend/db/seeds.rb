@@ -1,34 +1,38 @@
+
 projects = [
   {
-    title: 'Full-Stack Messaging App',
-    description: 'A full-stack messaging application built with Ruby on Rails and React. Features user authentication, customizable profiles, conversations, message history, and RESTful API communication.',
+    title: "OdinBook — Social Networking Platform",
+    description: "A production-deployed social networking platform featuring secure authentication, personalized profiles, social feeds, friendships, notifications, and private image storage. Includes an isolated, read-only recruiter demo, 115 automated tests, and a continuous integration and deployment pipeline.",
     technologies: [
-      'Ruby',
-      'Ruby on Rails',
-      'React',
-      'JavaScript',
-      'PostgreSQL',
-      'REST API'
+      "Ruby",
+      "Ruby on Rails",
+      "PostgreSQL",
+      "JavaScript",
+      "Hotwire",
+      "Active Storage",
+      "Supabase",
+      "CI/CD"
     ],
-    github_url: "https://github.com/jameshsims91/messaging-app",
-    live_url: "https://messaging-app-kuax.onrender.com/",
-    image_url: "/projects/messaging-app.webp",
+    github_url: "https://github.com/jameshsims91/odin-book",
+    live_url: "https://odinbook.jameshsims.tech/",
+    image_url: "/projects/odin-book.webp",
     featured: true,
     position: 1
   },
   {
-    title: "Photo Tagging Game",
-    description: "An interactive photo tagging game featuring server-side target validation, game sessions, scoring, and a leaderboard. Uses a Rails backend to validate guesses and manage gameplay data.",
+    title: "Full-Stack Messaging App",
+    description: "A full-stack messaging application built with Ruby on Rails and React. Features user authentication, customizable profiles, conversations, message history, and RESTful API communication.",
     technologies: [
       "Ruby",
       "Ruby on Rails",
       "React",
       "JavaScript",
+      "PostgreSQL",
       "REST API"
     ],
-    github_url: nil,
-    live_url: nil,
-    image_url: nil,
+    github_url: "https://github.com/jameshsims91/messaging-app",
+    live_url: "https://messaging-app-kuax.onrender.com/",
+    image_url: "/projects/messaging-app.webp",
     featured: true,
     position: 2
   },
@@ -66,7 +70,7 @@ projects = [
   }
 ]
 
-projects.each do | attributes |
+projects.each do |attributes|
   project = Project.find_or_initialize_by(
     title: attributes[:title]
   )
@@ -77,4 +81,7 @@ projects.each do | attributes |
   puts "Seeded: #{project.title}"
 end
 
+Project.where(title: "Photo Tagging Game").update_all(featured: false)
+
 puts "Total projects: #{Project.count}"
+puts "Featured projects: #{Project.featured.count}"
